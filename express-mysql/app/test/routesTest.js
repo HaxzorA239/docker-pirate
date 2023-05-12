@@ -100,7 +100,7 @@ describe("Test routes for REST-API", () => {
         res.status(200).json([fakeDeveloper1, fakeDeveloper2]);
       }
 
-      sinon.replace(model, "getAllDevelopers", fakeGetAllDevelopers);
+      sinon.replace(model, "getAllEstudiantes", fakeGetAllDevelopers);
 
       chai
         .request(server)

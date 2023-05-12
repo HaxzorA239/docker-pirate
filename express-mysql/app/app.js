@@ -13,7 +13,7 @@ app.use(router); // Expand routes functionalities with custom router
 
 // EXTRA COMMENT
 app.get("/", (req, res) => {
-  res.status(200).json({ message: "Hello, My name is Santiago." });
+  res.status(200).json({ message: "Hello, My name is Oscar." });
 });
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));

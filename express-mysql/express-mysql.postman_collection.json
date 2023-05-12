@@ -12,12 +12,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/developers",
+					"raw": "{{url}}/Estudiantes",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"developers"
+						"Estudiantes"
 					]
 				}
 			},
@@ -29,12 +29,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/developers/cc/1234",
+					"raw": "{{url}}/Estudiantes/cc/1234",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"developers",
+						"Estudiantes",
 						"cc",
 						"1234"
 					]
@@ -48,12 +48,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/developers/cc/2222",
+					"raw": "{{url}}/Estudiantes/cc/2222",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"developers",
+						"Estudiantes",
 						"cc",
 						"2222"
 					]
@@ -67,12 +67,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/developers/cc/3333",
+					"raw": "{{url}}/Estudiantes/cc/3333",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"developers",
+						"Estudiantes",
 						"cc",
 						"3333"
 					]
@@ -95,12 +95,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/developers/cc/1234",
+					"raw": "{{url}}/Estudiantes/cc/1234",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"developers",
+						"Estudiantes",
 						"cc",
 						"1234"
 					]
@@ -123,12 +123,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/developers/cc/1234",
+					"raw": "{{url}}/Estudiantes/cc/1234",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"developers",
+						"Estudiantes",
 						"cc",
 						"1234"
 					]
@@ -151,12 +151,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/developers/cc/1234",
+					"raw": "{{url}}/Estudiantes/cc/1234",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"developers",
+						"Estudiantes",
 						"cc",
 						"1234"
 					]
@@ -170,12 +170,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/developers/cc/1234",
+					"raw": "{{url}}/Estudiantes/cc/1234",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"developers",
+						"Estudiantes",
 						"cc",
 						"1234"
 					]

@@ -7,7 +7,7 @@ const dbConn = mysql.createConnection({
   port: process.env.DB_PORT || 3306,
   user: "root",
   password: "root",
-  database: "employees",
+  database: "Universidad",
 });
 
 module.exports = dbConn;

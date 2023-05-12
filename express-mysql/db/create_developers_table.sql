@@ -4,15 +4,15 @@ SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET @@global.time_zone = "+00:00";
 --
--- Database: `employees`
+-- Database: `Universidad`
 --
-DROP DATABASE IF EXISTS employees;
-CREATE DATABASE employees;
-USE employees;
+DROP DATABASE IF EXISTS Universidad;
+CREATE DATABASE Universidad;
+USE Universidad;
 --
--- Structure for the database: `developers`
+-- Structure for the database: `Estudiantes`
 --
-CREATE TABLE `developers` (
+CREATE TABLE `Estudiantes` (
     `id` int NOT NULL AUTO_INCREMENT,
     `name` varchar(255) NOT NULL,
     `lastname` varchar(255) NOT NULL,
@@ -22,10 +22,33 @@ CREATE TABLE `developers` (
     `age` int NOT NULL,
     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
+
 --
--- Add some sample data for the data of table: `developers`
+-- Structure for the database: `Materias`
 --
-INSERT INTO `developers` (
+CREATE TABLE `Materias` (
+    `id` int NOT NULL AUTO_INCREMENT,
+    `nombre` varchar(255) NOT NULL,
+    `aula` varchar(255) NOT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE = InnoDB DEFAULT CHARSET = latin1;
+--
+-- Structure for the database: `Estudiantes_Materias`
+--
+CREATE TABLE `Estudiantes_Materias` (
+    `id_estudiante` INT NOT NULL,
+    `id_materia` INT NOT NULL,
+    `calificacion`   INT,
+    `estado` BIT,
+    PRIMARY KEY(`id_estudiante`, `id_materia`),
+    FOREIGN KEY (`id_estudiante`) REFERENCES `Estudiantes`(`id`),
+    FOREIGN KEY (`id_materia`) REFERENCES `Materias`(`id`)
+) ENGINE = InnoDB DEFAULT CHARSET = latin1;
+
+--
+-- Add some sample data for the data of table: `Estudiantes`
+--
+INSERT INTO `Estudiantes` (
         `name`,
         `lastname`,
         `id_type`,
@@ -33,8 +56,20 @@ INSERT INTO `developers` (
         `area`,
         `age`
     )
-VALUES ('Santiago', 'Garcia', 'cc', '1234', 'DevOps', 21),
-    ('Monica', 'Hill', 'cc', '2222', 'ML', 22),
-    ('Elkin', 'Guerra', 'cc', '4321', 'Robotics', 30),
-    ('Melissa', 'Mejia', 'cc', '3333', 'Web', 40);
+VALUES ('Susy', 'Castillo', '18240889', '1234', 'Sistemas', 23),
+    ('Alan', 'Jimenez', '18240823', '0823', 'Sistemas', 23),
+    ('Alan', 'Sánchez', '18240823', '0863', 'Sistemas', 22),
+    ('Omar', 'Pérez', '18240823', '0828', 'Sistemas', 22);
+COMMIT;
+--
+-- Add some sample data for the data of table: `Estudiantes`
+--
+INSERT INTO `Materias` (
+        `nombre`,
+        `aula`
+    )
+VALUES ('Desarrollo de aplicaciones', 'D-14'),
+    ('Despliegue de Aplicaciones', 'D-06'),
+    ('Matemáticas Discretas', 'D-12'),
+    ('Bases de Datos', 'C-04');
 COMMIT;

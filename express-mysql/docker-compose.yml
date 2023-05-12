@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   express_rest_api:
-    container_name: my_express_rest_api
+    container_name: rest_api_alumnos
     build: ./app/
     environment:
       - DB_PORT=3306
@@ -27,7 +27,7 @@ services:
     environment:
       MYSQL_PASSWORD: root
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: employees
+      MYSQL_DATABASE: Universidad
     expose:
       - "3306"
     ports:
